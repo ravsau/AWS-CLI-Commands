@@ -1,0 +1,1 @@
+aws ec2 describe-images --filters 'Name=name,Values=*Ubuntu*' --query 'Images[*].[ImageId , Description]'
