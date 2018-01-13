@@ -18,7 +18,7 @@ aws s3 cp file1 s3://copy-file-saurav/
 
 
 Copy Everything in local file to a bucket:
-aws s3 sync .Ê s3://copy-file-saurav/
+aws s3 sync  s3://copy-file-saurav/
 
 
 crontab -e
@@ -31,7 +31,7 @@ Create a script to save all files to S3 bucket every (x) minutes/hours/days or m
 * press i for insert
 
 * #!/bin/bash
-* aws s3 sync /home/ec2-user/Documents/Ê s3://copy-file-saurav
+* aws s3 sync /home/ec2-user/Documents/ s3://copy-file-saurav
 
 * Press Esc
 * Type :wq! To save and exit
@@ -57,11 +57,11 @@ On command line type this to create a cron job:
 
 
  To exclude a file with certain extension:
-Ê
+
 aws s3 sync /home/ec2-user/Documents/Ê s3://copy-file-sauravÊ --exclude '*.rtf' --acl public-read --storage-class STANDARD_IA
 
 To exclude a file with public read permission and put in in s3- IA storage class:
-Ê
+
 aws s3 sync /home/ec2-user/Documents/Ê s3://copy-file-sauravÊ --acl public-read --storage-class STANDARD_IA
 
 
