@@ -1,5 +1,5 @@
 # AWS-CLI-Commands
-This repo has  useful commands for any AWS CLI user.
+This repo is intended to be used for mine Introduction to the AWS CLI course on Udemy. But this content will be useful to any AWS CLI user.
 
 
 The Bash+CLI folder has some powerful scripts that combine the features of Linux Bash and AWS CLI which let you do some cool things.
