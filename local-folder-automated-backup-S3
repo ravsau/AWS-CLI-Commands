@@ -1,25 +1,30 @@
 Prepared by Saurav Sharma | Sauravsharma.net
 
-S3 CLI commands for Mac/Linux machines
+S3 CLI commands 
 
 
 Create a bucket:
-aws s3 mb s3://test-saurav-123
+aws s3 mb s3://your-bucket
 
 Remove the bucket:
-aws s3 rb test-saurav-123
+aws s3 rb s3://your-bucket
 
+Remove a bucket with files in it:
+aws s3 rb s3://your-bucket --force
 
 Creating empty files in Linux :
 touch file{1..10}
 
 Copy a local file to a bucket:
-aws s3 cp file1 s3://copy-file-saurav/
+aws s3 cp file1 s3://your-bucket
 
 
 Copy Everything in local file to a bucket:
-aws s3 sync  s3://copy-file-saurav/
+aws s3 sync  s3://your-bucket
 
+
+
+### This next section works for Linux and Mac computers. We want to automatically backup local folder to S3
 
 crontab -e
 
@@ -58,11 +63,11 @@ On command line type this to create a cron job:
 
  To exclude a file with certain extension:
 
-aws s3 sync /home/ec2-user/Documents/Ê s3://copy-file-sauravÊ --exclude '*.rtf' --acl public-read --storage-class STANDARD_IA
+aws s3 sync /home/ec2-user/Documents/ s3://copy-file-sauravÊ --exclude '*.rtf' --acl public-read --storage-class STANDARD_IA
 
 To exclude a file with public read permission and put in in s3- IA storage class:
 
-aws s3 sync /home/ec2-user/Documents/Ê s3://copy-file-sauravÊ --acl public-read --storage-class STANDARD_IA
+aws s3 sync /home/ec2-user/Documents/ s3://copy-file-saurav --acl public-read --storage-class STANDARD_IA
 
 
 
