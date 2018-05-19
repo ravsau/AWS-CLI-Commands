@@ -1,0 +1,3 @@
+# To List all the object versions in your bucket . s3api is installed with aws cli.
+
+aws s3api list-object-versions --bucket your-bucket-name
