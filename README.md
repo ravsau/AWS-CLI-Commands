@@ -9,15 +9,14 @@ The Bash+CLI folder has some powerful scripts that combine the features of Linux
 ``` 
 ./runInstanceDefaultVPC
 
-
 ``` 
 
 And you have an instance running!!
 Remember to make the file executable and to rename the key to that you own.
 
 #### Second Example:
-You can combine bash+CLU to describe tags for all your Elastic Load Balancers on a certain region.
-You can find this script under Bash+CLI/ELB/
+You can combine bash+CLI to describe tags for all your Elastic Load Balancers on a certain region.
+You can find this script under Bash+CLI/ELB/ folder   or by [clicking here](https://github.com/ravsau/AWS-CLI-Commands/tree/master/Bash%2BCLI/ELB)
 
 
 
