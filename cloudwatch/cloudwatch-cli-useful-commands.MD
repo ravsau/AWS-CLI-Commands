@@ -15,9 +15,11 @@ The maximum number of data points returned from a single call is 1,440. If you r
 
 
 This command will return
+
 ```
 aws cloudwatch get-metric-statistics --metric-name CPUUtilization --start-time 2018-06-01T23:18:00Z --end-time 2018-06-19T23:18:00Z --period 3600 --namespace AWS/EC2 --statistics Average --dimensions Name=InstanceId,Value=i-07442b7dca24a5740
 ```
+
 ```json
        "Timestamp": "2018-06-04T20:15:00Z", 
             "Average": 8.612647031582847, 
@@ -63,36 +65,7 @@ aws cloudwatch get-metric-statistics --metric-name CPUUtilization --start-time 2
             "Average": 9.349541539316677, 
             "Unit": "Percent"
         }, 
-        {
-            "Timestamp": "2018-06-03T05:15:00Z", 
-            "Average": 9.426646290636194, 
-            "Unit": "Percent"
-        }, 
-        {
-            "Timestamp": "2018-06-02T16:15:00Z", 
-            "Average": 10.564663023679378, 
-            "Unit": "Percent"
-        }, 
-        {
-            "Timestamp": "2018-06-05T23:15:00Z", 
-            "Average": 12.09507270538125, 
-            "Unit": "Percent"
-        }, 
-        {
-            "Timestamp": "2018-06-15T06:15:00Z", 
-            "Average": 15.829728937050426, 
-            "Unit": "Percent"
-        }, 
-        {
-            "Timestamp": "2018-06-18T13:15:00Z", 
-            "Average": 9.733320984224035, 
-            "Unit": "Percent"
-        }, 
-        {
-            "Timestamp": "2018-06-18T00:15:00Z", 
-            "Average": 8.444652835664673, 
-            "Unit": "Percent"
-        }, 
+       
         {
             "Timestamp": "2018-06-05T10:15:00Z", 
             "Average": 9.144206724089889, 
@@ -115,6 +88,42 @@ aws cloudwatch get-metric-statistics --metric-name CPUUtilization --start-time 2
         }
     ], 
     "Label": "CPUUtilization"
+    }
     
-    ```
+ ```
+To get the max CPU Utilization use this command:
+
+```
+aws cloudwatch get-metric-statistics --metric-name CPUUtilization --start-time 2018-06-01T23:18:00Z --end-time 2018-06-19T23:18:00Z --period 3600 --namespace AWS/EC2 --statistics Maximum --dimensions Name=InstanceId,Value=i-07442b7dca24a5740
+```
+
+```json
+      {
+            "Timestamp": "2018-06-18T00:15:00Z", 
+            "Maximum": 28.3333333333455, 
+            "Unit": "Percent"
+        }, 
+        {
+            "Timestamp": "2018-06-05T10:15:00Z", 
+            "Maximum": 30.5084745762589, 
+            "Unit": "Percent"
+        }, 
+        {
+            "Timestamp": "2018-06-08T17:15:00Z", 
+            "Maximum": 29.9999999999879, 
+            "Unit": "Percent"
+        }, 
+        {
+            "Timestamp": "2018-06-11T11:15:00Z", 
+            "Maximum": 28.3333333333455, 
+            "Unit": "Percent"
+        }, 
+        {
+            "Timestamp": "2018-06-08T04:15:00Z", 
+            "Maximum": 100.0, 
+            "Unit": "Percent"
+        }
+    ], 
+    "Label": "CPUUtilization"
+```
 
