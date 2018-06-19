@@ -20,5 +20,9 @@ You can find this script under Bash+CLI/ELB/ folder   or by [clicking here](http
 
 
 
+## My AWS CLI Videos on Youtube
+I have 10+ videos on youtube related to AWS CLI where I use commands in this repo to accomplish tasks like creating a VPC etc.
+
+[![](https://i.ytimg.com/vi/qotVe8C62NQ/maxresdefault.jpg)](https://www.youtube.com/watch?v=v2GdoN4vCjY&list=PLQP5dDPLts67DnDIb2IvXd6qPFbLabDCO) 
 
 
