@@ -1,0 +1,115 @@
+Creating  Snapshots with the CLI  Lab
+
+
+
+To create a snapshot
+This example command creates a snapshot of the volume with a volume ID of vol-1234567890abcdef0 and a short description to identify the snapshot.
+Command:
+aws ec2 create-snapshot --volume-id vol-1234567890abcdef0 --description "This is my root volume snapshot."
+To create a new volume
+This example command creates an 10 GiB General Purpose (SSD) volume in the Availability Zone us-east-1a.
+Command:
+aws ec2 create-volume --size 10 --region us-east-1 --availability-zone us-east-1a --volume-type gp2
+
+To attach a volume to an instance
+This example command attaches a volume (vol-1234567890abcdef0) to an instance (i-01474ef662b89480) as /dev/sdf.
+Command:
+aws ec2 attach-volume --volume-id vol-1234567890abcdef0 --instance-id i-01474ef662b89480 --device /dev/sdf
+
+
+
+To make an EBS volume available for use on Linux
+
+1. Connect to your instance using SSH.
+2. Use the lsblk command to view your available disk devices and their mount points (if applicable) to help you determine the correct device name to use.
+3. New volumes are raw block devices, and you must create a file system on them before you can mount and use them. Use the sudo file -s dev/xvdf  command to list special information, such as file system type.
+4. Use the following command to create an ext4 file system on the volume. Substitute the device name: sudo mkfs -t ext4 /dev/xvdf
+5. Make a mount point : [ec2-user ~]$ sudo mkdir mount_point
+6. Use the following command to mount the volume at the location you just created: [ec2-user ~]$ sudo mount /dev/xvdf mount_point
+7. Write files to your new mount point. 
+
+
+
+• cd newDrive/
+• ls
+• sudo chown ec2-user:ec2-user -R newDrive/
+• cd newDrive/
+• echo "hello">hello.txt
+• ls
+• cd ..
+• umount newDrive/
+• sudo umount newDrive/
+• ls
+• cd newDrive/
+• ls
+
+create a snapshot
+Take a snapshot of the device you just wrote to.
+Command:
+aws ec2 create-snapshot --volume-id vol-1234567890abcdef0 --description "This is my second volume snapshot."
+
+To detach a volume from an instance
+This example command detaches the volume (vol-049df61146c4d7901) from the instance it is attached to.
+Command:
+aws ec2 detach-volume --volume-id vol-1234567890abcdef0
+
+Attach the volume to another instance:
+aws ec2 attach-volume --volume-id vol-0d234f62cfca629c5 --instance-id i-07442b7dca24a5740 --device /dev/sdf
+
+Mount the volume by following the same steps as above.
+Then:
+lsblk
+mkdir test
+sudo mount /dev/xvdf test/
+ls
+cd test/
+ls
+
+
+You should see the file hello.txt
+
+
+
+
+Now let’s detach delete the volume:
+aws ec2 detach-volume --volume-id vol-0d234f62cfca629c5
+
+
+Then let’s delete the volume:
+
+aws ec2 delete-volume --volume-id vol-0d234f62cfca629c5
+
+Now let’s list all the snapshot:
+aws ec2 describe-snapshots
+
+Find the snapshot we created earlier by looking at the description:
+Restore the snapshot:
+aws ec2 create-volume --region us-east-1 --availability-zone us-east-1a --volume-type gp2 --snapshot-id snap-06e1af3ca95e5a387
+
+Attach that to one of the instances:
+ sudo file -s /dev/xvdf
+ sudo mount /dev/xvdf newDrive/
+ ls
+ cd newDrive/
+ ls
+
+You should see your file you saved earlier.
+
+
+This concludes the lab. We took snapshots and restored them later.
+
+Make sure to delete the instances, volumes and snapshots after you’re done.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
