@@ -30,36 +30,7 @@ aws cloudwatch get-metric-statistics --metric-name CPUUtilization --start-time 2
             "Average": 8.627103207681818, 
             "Unit": "Percent"
         }, 
-        {
-            "Timestamp": "2018-06-08T03:15:00Z", 
-            "Average": 8.96780741564035, 
-            "Unit": "Percent"
-        }, 
-        {
-            "Timestamp": "2018-06-07T14:15:00Z", 
-            "Average": 10.167006267173054, 
-            "Unit": "Percent"
-        }, 
-        {
-            "Timestamp": "2018-06-10T21:15:00Z", 
-            "Average": 8.785140934209641, 
-            "Unit": "Percent"
-        }, 
-        {
-            "Timestamp": "2018-06-13T15:15:00Z", 
-            "Average": 9.090943471952311, 
-            "Unit": "Percent"
-        }, 
-        {
-            "Timestamp": "2018-06-10T08:15:00Z", 
-            "Average": 8.323454045876925, 
-            "Unit": "Percent"
-        }, 
-        {
-            "Timestamp": "2018-06-13T02:15:00Z", 
-            "Average": 9.44678305702199, 
-            "Unit": "Percent"
-        }, 
+        
         {
             "Timestamp": "2018-06-15T19:15:00Z", 
             "Average": 9.349541539316677, 
