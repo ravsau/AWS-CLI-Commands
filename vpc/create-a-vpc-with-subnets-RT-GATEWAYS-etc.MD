@@ -131,27 +131,27 @@ aws ec2 create-key-pair --key-name MyKeyPairCLI
 Change the permissions on that file to restrict access:
 ```console 
 chmod 400 MyKeyPairCLI.pem
-```console 
+```
 
 Launch EC2 Instance In public subnet with Amazon AMI ami-8c1be5f6 :
 ```console 
 aws ec2 run-instances --image-id ami-8c1be5f6 --count 1 --instance-type t2.micro --key- name MyKeyPairCLI --security-group-ids sg-c3ed34b1 --subnet-id subnet-7314ad17 -- associate-public-ip-address
-```console 
+```
 
 TAG EC2:
 ```console 
 aws ec2 create-tags --resources i-05c8b15394d0905b8 --tags Key=Name,Value=CLI_EC2
-```console 
+```
 
 Describe Instance to get the IP or check the console:
 ```console 
 aws ec2 describe-instances
-```console 
+```
 
 SSH into your web browser:
 ```console 
 ssh ec2-user@34.34.234.4 -i MyKeyPairCLI.pem
-```console 
+```
 
 
 And you’re now logged in! Have fun with your setup.
