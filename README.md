@@ -29,3 +29,10 @@ I have 10+ videos on youtube related to AWS CLI where I use commands in this rep
 [![](https://i.ytimg.com/vi/qotVe8C62NQ/maxresdefault.jpg)](https://www.youtube.com/watch?v=v2GdoN4vCjY&list=PLQP5dDPLts67DnDIb2IvXd6qPFbLabDCO) 
 
 
+## Resources
+- AWS CLI Official Documentation:
+  - https://docs.aws.amazon.com/cli/index.html
+- Install AWS CLI
+  - https://docs.aws.amazon.com/cli/latest/userguide/installing.html
+- CLI Exit codes
+  - https://docs.aws.amazon.com/cli/latest/topic/return-codes.html
