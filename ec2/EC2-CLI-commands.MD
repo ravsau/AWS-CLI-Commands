@@ -18,7 +18,7 @@ aws ec2 describe-instances --output table
 List only few things like a dashboard:
 
 ```console
-aws ec2 describe-instances query 'Reservations[].Instances[].[Placement.AvailabilityZone, State.Name, InstanceId, InstanceType,VpcId,SubnetId,ImageId,Tags[?Key==`Name`].Value|[0]]'
+aws ec2 describe-instances --query 'Reservations[].Instances[].[Placement.AvailabilityZone, State.Name, InstanceId, InstanceType,VpcId,SubnetId,ImageId,Tags[?Key==`Name`].Value|[0]]'
 ```
 
 
