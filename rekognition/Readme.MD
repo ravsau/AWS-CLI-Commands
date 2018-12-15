@@ -42,5 +42,12 @@ aws rekognition compare-faces --source-image "S3Object={Bucket=image-rekogniton-
 ```console
 aws rekognition get-label-detection --job-id  206a930fce775abeed05203637342a36ced6a52d71b99e77228c1fd8fe551471 --query Labels[].Label[].[Confidence,Name]
 ```
+
+
+8) Adult content Detection
+```
+aws rekognition detect-moderation-labels --source-image file:///Users/your-username/downloads/example.jpg
+
+```
 # Further Reference
 https://docs.aws.amazon.com/cli/latest/reference/rekognition/index.html#cli-aws-rekognition
