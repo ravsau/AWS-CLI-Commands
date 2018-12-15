@@ -21,11 +21,11 @@ aws rekognition detect-labels --image "S3Object={Bucket=image-rekogniton-cli,Nam
 ```
 
 3)  Celebrity Detection: with Ronaldo and Messi
-```
+```bash
 aws rekognition recognize-celebrities --image "S3Object={Bucket=image-rekogniton-cli,Name=ronaldo.jpg}" --query 'CelebrityFaces[].Name'
 ```
 4) Compare Messi with a lookalike
-```
+```bash
 aws rekognition compare-faces --source-image "S3Object={Bucket=image-rekogniton-cli,Name=messi.jpg}" --target-image "S3Object={Bucket=image-rekogniton-cli,Name=lookalike.jpg}" --query 'FaceMatches[].Similarity'
 ```
 
@@ -33,12 +33,12 @@ aws rekognition compare-faces --source-image "S3Object={Bucket=image-rekogniton-
 
 
 6) Video Recognition with a video of a busy city street. You'll get a JobID in return. Save this we need this for later
-```
+```bash
  aws rekognition start-label-detection --video "S3Object={Bucket=image-rekogniton-cli,Name=Pedestrians.mp4}"
 
 ```
 
 7) Get the labels from Video
-```
+```bash
 aws rekognition get-label-detection --job-id  206a930fce775abeed05203637342a36ced6a52d71b99e77228c1fd8fe551471 --query Labels[].Label[].[Confidence,Name]
 ```
