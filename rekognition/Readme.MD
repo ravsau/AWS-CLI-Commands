@@ -25,7 +25,9 @@ aws rekognition detect-labels --image "S3Object={Bucket=image-rekogniton-cli,Nam
 aws rekognition recognize-celebrities --image "S3Object={Bucket=image-rekogniton-cli,Name=ronaldo.jpg}" --query 'CelebrityFaces[].Name'
 ```
 4) Compare Messi with a lookalike
+```
 aws rekognition compare-faces --source-image "S3Object={Bucket=image-rekogniton-cli,Name=messi.jpg}" --target-image "S3Object={Bucket=image-rekogniton-cli,Name=lookalike.jpg}" --query 'FaceMatches[].Similarity'
+```
 
 5) Compare Messi(Bearded) with a young Messi ( No Beard). Results are crazy accurate!
 
