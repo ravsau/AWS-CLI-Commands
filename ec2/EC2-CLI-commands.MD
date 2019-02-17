@@ -60,7 +60,12 @@ aws ec2 terminate-instances --instance-ids i-0b20d7680fa0e6ba0  i-00251da28fa34f
 
 
 
+Describe and filter to show only windows Instance( use of filter switch )
 
+```console
+aws ec2 describe-instances --query 'Reservations[].Instances[].PublicIpAddress' --filters "Name=platform,Values=windows"
+
+```
 
 
 
