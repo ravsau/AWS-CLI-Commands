@@ -1,8 +1,11 @@
 # AWS-CLI-Commands
+
+### 🎓 [Full AWS CLI Course on Udemy — $9.99](https://www.udemy.com/course/aws-cli-course/?referralCode=16426B3D9228F18FD52A) | 32K+ students, 4.5★ (350 reviews)
+
+---
+
 This repo is intended to be used for mine Introduction to the AWS CLI course on Udemy. But this content will be useful to any AWS CLI user.
 
-## Full Course Link and Coupon
-https://www.udemy.com/aws-cli-course/?couponCode=CERTIFIED
 ---
 
 The Bash+CLI folder has some powerful scripts that combine the features of Linux Bash and AWS CLI which let you do some cool things.
@@ -36,3 +39,14 @@ I have 10+ videos on youtube related to AWS CLI where I use commands in this rep
   - https://docs.aws.amazon.com/cli/latest/userguide/installing.html
 - CLI Exit codes
   - https://docs.aws.amazon.com/cli/latest/topic/return-codes.html
+
+---
+
+## More from CloudYeti
+
+| Resource | Link |
+|----------|------|
+| **AWS CLI Course on Udemy** (32K+ students, 4.5★) | [Enroll for $9.99](https://www.udemy.com/course/aws-cli-course/?referralCode=16426B3D9228F18FD52A) |
+| **AI Cert Practice Exams** (500+ questions) | [learn.cloudyeti.io](https://learn.cloudyeti.io) |
+| **YouTube Channel** (15K+ subscribers) | [CloudYeti on YouTube](https://www.youtube.com/@yourcloudyeti) |
+| **All Courses** | [cloudyeti.io/courses](https://cloudyeti.io/courses) |
